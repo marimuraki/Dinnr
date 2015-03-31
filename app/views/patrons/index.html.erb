@@ -1,4 +1,4 @@
-Hello!
+Hello Dinrs!
 
 <br>
 <% @patrons.each do |p| %>
@@ -6,4 +6,8 @@ Hello!
 Email: <%= p.email %>
 <br>
 About: <%= p.about %>
+	<% if p.profile_pic_url.present? %>
+		<br>
+		<%= image_tag p.profile_pic_url, height:"200" %>
+	<% end %>
 <% end %>
